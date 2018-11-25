@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 
 
-const IndexPage = () => (
+const TermsPage = () => (
   <Layout>
   <h2>Pepperbaby Terms of Service</h2>
 <h3>1. Terms</h3>
@@ -39,4 +39,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default TermsPage
