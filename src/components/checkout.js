@@ -61,7 +61,7 @@ const Checkout = class extends React.Component {
       billingAddress: true,
       shippingAddress: true,
       token: token => {
-        fetch(`/.netlify/functions/checkout`, {
+        fetch('/.netlify/functions/checkout', {
           method: "POST",
           mode: "no-cors",
           body: JSON.stringify({
