@@ -54,11 +54,14 @@ const Checkout = class extends React.Component {
     event.preventDefault()
     this.setState({ disabled: true, buttonText: "WAITING..." })
     this.stripeHandler.open({
-      name: "Demo Product",
+      name: "Pepperbaby Product",
       amount: amount,
       description: "A product well worth your time",
+      zipCode: true,
+      billingAddress: true,
+      shippingAddress: true,
       token: token => {
-        fetch(`AWS_LAMBDA_URL`, {
+        fetch(`/.netlify/functions/checkout`, {
           method: "POST",
           mode: "no-cors",
           body: JSON.stringify({
