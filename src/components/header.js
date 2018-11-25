@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 const Header = ({ siteTitle }) => (
   <div className={css(styles.header)}>
     <Link className={css(styles.siteName)} to="/">
-        🌶️👶.com
+        🌶👶.com
     </Link>
   </div>
 )
