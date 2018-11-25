@@ -1,32 +1,27 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { StyleSheet, css } from 'aphrodite'
+
+const styles = StyleSheet.create({
+  siteName: {
+    color: 'black',
+    textDecoration: 'none',
+    fontFamily: 'sans-serif',
+    fontSize: '1.5rem'
+
+  },
+   header: {
+     margin: '0 auto',
+     maxWidth: '960px',
+     padding: '1.45rem 1.0875rem',
+   }
+})
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <div className={css(styles.header)}>
+    <Link className={css(styles.siteName)} to="/">
+        🌶️👶.com
+    </Link>
   </div>
 )
 
